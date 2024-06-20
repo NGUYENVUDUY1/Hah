@@ -1,0 +1,17 @@
+function CheckBossCake()
+    for i,v in pairs(Enemies:GetChildren()) do
+        if table.find(Bosscake, v.Name) and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+            return v
+        end
+    end
+    for i,v in pairs(RS:GetChildren()) do
+        if table.find(Bosscake, v.Name) and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+            return v
+        end
+    end
+end
+local elitemob = {
+    "Deandre",
+    "Urban",
+    "Diablo"
+}
